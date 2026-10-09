@@ -145,12 +145,24 @@ a {
     color: #fff
 }
 
-.hero-bg {
+/*.hero-bg {
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, rgba(4, 7, 8, .93) 0%, rgba(4, 7, 8, .78) 39%, rgba(4, 7, 8, .12) 75%), linear-gradient(135deg, #222 0%, #111 50%, #7a2e13 100%)
+}*/
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 7, 8, 0.78) 0%,
+            rgba(4, 7, 8, 0.50) 45%,
+            rgba(4, 7, 8, 0.15) 100%
+        ),
+        url("assets/hero.png") center center / cover no-repeat;
 }
-
+/*
 .hero-bg:after {
     content: "";
     position: absolute;
@@ -161,7 +173,7 @@ a {
     background: radial-gradient(circle at 30% 45%, rgba(255, 104, 25, .45), transparent 35%), linear-gradient(130deg, transparent 35%, rgba(255, 255, 255, .07) 36%, transparent 38%), linear-gradient(160deg, #263037, #0f1517 65%);
     transform: skewX(-8deg)
 }
-
+*/
 .hero-content {
     height: 100%;
     position: relative;
