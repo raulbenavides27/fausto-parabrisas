@@ -344,35 +344,35 @@ a {
 }
 
 .windshield {
-    background: linear-gradient(135deg, #52646c, #dce6e8 48%, #303a3e)
+    background-image: url("assets/parabrisas.jpg");
 }
 
 .truck {
-    background: linear-gradient(135deg, #d5d5d0 10%, #5c6260 11%, #ecece9 58%, #777 59%)
+    background-image: url("assets/accesorios.jpg");
 }
 
 .security {
-    background: linear-gradient(135deg, #171b1e, #737a7d 50%, #151719)
+    background-image: url("assets/seguridad.jpg");
 }
 
 .audio {
-    background: linear-gradient(135deg, #12171a, #39454b 55%, #0d1011)
+    background-image: url("assets/audio.jpg");
 }
 
 .camera {
-    background: linear-gradient(135deg, #b7b9b7, #333b3d 55%, #e2e2df)
+    background-image: url("assets/caja-6.jpg");
 }
 
 .locksmith {
-    background: linear-gradient(135deg, #d9d7d0, #555 50%, #181a1a)
+    background-image: url("assets/caja-7-.jpg");
 }
 
 .windows {
-    background: linear-gradient(135deg, #212a2d, #89979c 45%, #161b1c)
+    background-image: url("assets/caja-2.png");
 }
 
 .hitch {
-    background: linear-gradient(135deg, #1d2426, #707678 48%, #111)
+    background-image: url("assets/caja-5-.jpg");
 }
 
 .service-body {
@@ -932,4 +932,37 @@ footer {
         display: grid;
         gap: 12px
     }
+}
+
+/* Imágenes reales de la carpeta assets: integración puntual sin alterar el diseño */
+.work-image {
+    background-size: cover;
+    background-position: center;
+}
+.work-image.work-1 {
+    background-image: url("assets/hero.png");
+}
+.work-image.work-2 {
+    background-image: url("assets/Instalacion.jpg");
+}
+.work-image.work-3 {
+    background-image: url("assets/resultado.jpg");
+}
+.product-photo {
+    background-size: cover;
+    background-position: center;
+}
+.product-photo.p1 {
+    background-image: url("assets/accesorios.jpg");
+}
+.product-photo.p2 {
+    background-image: url("assets/audio.jpg");
+}
+.product-photo.p3 {
+    background-image: url("assets/seguridad.jpg");
+}
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
