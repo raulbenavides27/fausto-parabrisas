@@ -1,7 +1,6 @@
 * {
     box-sizing: border-box
 }
-
 :root {
     --orange: #f4511e;
     --orange2: #ff6a21;
@@ -10,11 +9,9 @@
     --muted: #687078;
     --light: #f5f6f6
 }
-
 html {
     scroll-behavior: smooth
 }
-
 body {
     margin: 0;
     font-family: Montserrat, Arial, sans-serif;
