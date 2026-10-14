@@ -985,3 +985,37 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
+
+/* Enlaces de contacto y redes sociales */
+.contact-data a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, .55);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.contact-data a:hover { text-decoration-color: currentColor; }
+
+.footer-inner { flex-wrap: wrap; }
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+.social-links a:hover { color: var(--orange2); }
+.social-links svg { width: 21px; height: 21px; display: block; }
+
+@media (max-width: 520px) {
+  .social-links { flex-wrap: wrap; gap: 14px; }
+  .social-links a { font-size: 11px; }
+}

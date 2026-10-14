@@ -1,53 +1,24 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
-const toast = document.querySelector('#toast');
 
-const WHATSAPP = '56985039272';
-const MENSAJE_WHATSAPP =
-  'Hola, quisiera cotizar un servicio para mi vehículo. ¿Me pueden ayudar?';
+const WHATSAPP = '56954317536';
+const MENSAJE_WHATSAPP = 'Hola, quisiera cotizar un servicio para mi vehículo. ¿Me pueden ayudar?';
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MENSAJE_WHATSAPP)}`;
 
 menuToggle?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
 });
 
 document.querySelectorAll('.main-nav a').forEach(link => {
   link.addEventListener('click', () => {
-    nav.classList.remove('open');
+    nav?.classList.remove('open');
+    menuToggle?.setAttribute('aria-expanded', 'false');
   });
 });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
 
-function showToast(message) {
-  toast.textContent = message;
-  toast.classList.add('show');
-
-  setTimeout(() => {
-    toast.classList.remove('show');
-  }, 3500);
-}
-
-document.querySelectorAll('form').forEach(form => {
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-
-    showToast(
-      'Formulario preparado. Configura los datos reales de contacto para activar el envío.'
-    );
-  });
-});
-
-// Configurar todos los botones que digan "WhatsApp"
-document.querySelectorAll('a[href="#contacto"]').forEach(link => {
-  if (
-    link.textContent.toLowerCase().includes('whatsapp') &&
-    WHATSAPP
-  ) {
-    link.href =
-      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(MENSAJE_WHATSAPP)}`;
-
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  }
-});
+// Los formularios se envían directamente a FormSubmit mediante sus atributos action y method.
+// No interceptar el submit: FormSubmit debe recibir los datos y gestionar su confirmación.
