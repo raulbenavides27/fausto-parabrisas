@@ -1018,4 +1018,14 @@ footer {
 @media (max-width: 520px) {
   .social-links { flex-wrap: wrap; gap: 14px; }
   .social-links a { font-size: 11px; }
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 12px;
+  }
+
+  .hero-content {
+    padding-top: 8px;
+  }
+}
 }
